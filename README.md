@@ -1,0 +1,31 @@
+# Quantum classification of strawberry leaves
+CTIC adaptation of ARQA demo 1
+
+- dataset
+  - hojas2clases: Unzip the compressed file inside here
+  - HojasSimulador: Unzip the compressed file inside here
+- notebooks
+- src
+  - nn
+    - ansatz
+    - encodings
+    - measurements
+    - models
+      - hybrid
+        - HQNN_Parallel.py
+        - HQNN_quanv.py
+      - quantum
+        - QCNN.py
+    - qlayers
+      - quantum_linear.py
+      - quanvolution.py
+  - utils     
+    - dataset.py
+    - plotting.py
+    - reshape_data.py
+    - run_conf.py
+    - run_experiment.py
+    - run_inference.py
+    - training.py  
+  - YOLO
+    - yolo_funcs.py

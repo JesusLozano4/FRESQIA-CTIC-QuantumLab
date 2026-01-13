@@ -1,0 +1,53 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+def confusion_matrix_plot(confusion_matrix, labels, title='Confusion Matrix', save_path='', filename='confusion_matrix.png'):
+
+    plt.figure(figsize=(8, 6))
+    
+    # Plotting the confusion matrix with heatmap
+    sns.heatmap(confusion_matrix, annot=True, fmt='d', cmap='crest', 
+                 xticklabels=labels, yticklabels=labels, cbar=True)
+
+    plt.title(title, fontsize=16)
+    plt.xlabel('Predicted Labels', fontsize=12)
+    plt.ylabel('True Labels', fontsize=12)
+    plt.xticks(rotation=45)
+    plt.yticks(rotation=0)
+    
+    plt.tight_layout()
+    plt.savefig(save_path + filename, bbox_inches='tight')
+    plt.show()
+
+
+def accuracies(train_accuracies, val_accuracies):
+    plt.figure()
+    plt.plot(train_accuracies, label='Train')
+    plt.plot(val_accuracies, label='Validation')
+    plt.xlabel('Epochs')
+    plt.ylabel('Accuracy')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+def losses(train_losses, val_losses):
+    plt.figure()
+    plt.plot(train_losses, label='Train')
+    plt.plot(val_losses, label='Validation')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+def other_metrics(precision, recall, f1):
+    plt.figure()
+    plt.plot(precision, label='Precision')
+    plt.plot(recall, label='Recall')
+    plt.plot(f1, label='F1-score')
+    plt.title('Métricas adicionales')
+    plt.xlabel('Epochs')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
