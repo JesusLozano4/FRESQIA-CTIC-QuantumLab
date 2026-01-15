@@ -1,4 +1,4 @@
-# Quantum classification of strawberry leaves
+# Foliar REcognition of Symptoms using Quantum and Artificial Intelligence: FRESQIA
 This project originates from previous work on the **ARQA Demonstrator 1**, within the framework of **[Cervera Network ARQA](https://redarqa.es/)**. The architectures and structures developed in that phase have been adapted and repurposed to create a disease detection system for strawberry leaves. This initiative aims to increase the visibility of **Quantum Computing** within the agricultural sector, showcasing its practical utility and its promise for future scalability.
 
 ## Project Structure
