@@ -112,7 +112,7 @@ def quantum_frame_predict(modelq, results, frame, image_size, clases):
     original = frame.copy()
     result = results[0]
 
-    estado = "No se detecta semáforo"
+    estado = "No se detectan hojas"
 
     if len(result.boxes) == 0:
         return estado, frame
