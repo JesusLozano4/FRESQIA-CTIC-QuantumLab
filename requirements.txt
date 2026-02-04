@@ -3,7 +3,6 @@ loguru==0.7.3
 matplotlib==3.10.0
 mlflow==2.21.0
 mlflow_skinny==2.21.0
-numpy==2.2.6
 opencv_python_headless==4.13.0.90
 PennyLane==0.40.0
 Pillow==11.1.0
