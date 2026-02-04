@@ -54,7 +54,7 @@ def clasificar_hojas(crop_image, image_size, modelq):
         salida = salida[:, indices_clases_interes]
             
         probs = F.softmax(salida, dim=1).cpu().numpy().flatten()
-        print(f"Probabilidades: healthy = {probs[0]:.4f}, scorch = {probs[1]:.4f}")
+        #print(f"Probabilidades: healthy = {probs[0]:.4f}, scorch = {probs[1]:.4f}")
         if probs[0] >= 0.5:
             nombre_clase = 'healthy'
         else:
@@ -131,7 +131,7 @@ def quantum_frame_predict(modelq, results, frame, image_size, clases):
             clase = clasificar_hojas(resized_crop, image_size, modelq)
 
             # Dibujar la caja y la clase sobre la imagen original
-            color = (0, 255, 0) if clase == "green" else (0, 255, 255) if clase == "yellow" else (0, 0, 255)
+            color = (0, 255, 0) if clase == "healthy" else (0, 255, 255) if clase == "scorch" else (0, 0, 255)
 
         cv2.rectangle(original, (x1, y1), (x2, y2), color, 2)
         cv2.putText(original, clase, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
