@@ -1,4 +1,3 @@
-from roboflow import Roboflow
 from PIL import Image as Image2
 import cv2
 import torch.nn.functional as F
