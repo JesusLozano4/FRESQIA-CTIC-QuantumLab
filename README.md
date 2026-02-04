@@ -1,7 +1,7 @@
 # Foliar REcognition of Symptoms using Quantum and Artificial Intelligence: FRESQIA
 This project originates from previous work on the **ARQA Demonstrator 1**, within the framework of **[Cervera Network ARQA](https://redarqa.es/)**. The architectures and structures developed in that phase have been adapted and repurposed to create a disease detection system for strawberry leaves. This initiative aims to increase the visibility of **Quantum Computing** within the agricultural sector, showcasing its practical utility and its promise for future scalability.
 
-All experiments have been conducted on our **QUTE** emulation platform. You can request **free access** to reproduce these results or to carry out other research and academic activities here: https://qutev3.test.ctic.es/.
+All experiments have been conducted on our **QUTE** emulation platform. You can request **free access** to reproduce these results or to carry out other research and academic activities by filling out this form: https://forms.gle/vGuLSZa8S4LvMt9J9
 
 ## Project Structure
 - dataset
