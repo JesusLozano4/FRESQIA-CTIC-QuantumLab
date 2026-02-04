@@ -8,7 +8,7 @@ import collections
 import random
 
 class Two_Dataset:
-    def __init__(self, root="../dataset/hojas2clases", image_size=64, batch_size=256,
+    def __init__(self, root="../dataset/hojas2clases/Data1", image_size=64, batch_size=256,
                  test_size=0.2, random_state=42, examples_per_class=10000,
                  allowed_classes=None, output='np', dset="Colors"):
         self.root = root
@@ -147,7 +147,7 @@ class Two_Dataset:
 def load_dataset(dataset, output, limit, allowed_classes, image_size, test_size):
     if dataset == "2hojas":
         data = Two_Dataset(
-            root='../dataset/hojas2clases',
+            root='../dataset/hojas2clases/Data1',
             image_size=image_size,
             examples_per_class=limit,
             batch_size=32,
