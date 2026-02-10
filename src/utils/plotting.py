@@ -17,7 +17,7 @@ def confusion_matrix_plot(confusion_matrix, labels, title='Confusion Matrix', sa
     plt.yticks(rotation=0)
     
     plt.tight_layout()
-    plt.savefig(save_path + filename, bbox_inches='tight')
+    #plt.savefig(save_path + filename, bbox_inches='tight')
     plt.show()
 
 
