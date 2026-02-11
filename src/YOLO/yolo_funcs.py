@@ -87,17 +87,25 @@ def quantum_predict(modelq, results, image_size, clases):
 
             resized_crop = cv2.resize(crop, (16, 16))
 
+            # Definir color por defecto para evitar errores si no entra en el if
+            color = (255, 255, 255) 
+
             if clases == "Hojas":
                 clase = clasificar_hojas(resized_crop, image_size, modelq)
                 color = (0, 255, 0) if clase == "healthy" else (0, 255, 255) if clase == "scorch" else (0, 0, 255)
                 direc = "_hojas_lejos"
                 if isinstance(modelq, FlexHybridCNN):
                     direc += "H"
+            
+            # --- CAMBIOS AQUÍ ---
 
-            cv2.rectangle(original, (x1, y1), (x2, y2), color, 2)
-            cv2.putText(original, clase, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+            grosor_caja = 5 
+            grosor_texto = 3 
 
-        # Guardar la imagen anotada aunque no haya detecciones
+            cv2.rectangle(original, (x1, y1), (x2, y2), color, grosor_caja)
+            cv2.putText(original, clase, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, grosor_texto)
+
+        # Guardar la imagen anotada
         save_dir = os.path.join(base_dir, direc if direc else "")
         os.makedirs(save_dir, exist_ok=True)
 
@@ -132,9 +140,11 @@ def quantum_frame_predict(modelq, results, frame, image_size, clases):
 
             # Dibujar la caja y la clase sobre la imagen original
             color = (0, 255, 0) if clase == "healthy" else (0, 255, 255) if clase == "scorch" else (0, 0, 255)
-
-        cv2.rectangle(original, (x1, y1), (x2, y2), color, 2)
-        cv2.putText(original, clase, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+            
+        grosor_caja = 5 
+        grosor_texto = 3 
+        cv2.rectangle(original, (x1, y1), (x2, y2), color, grosor_caja)
+        cv2.putText(original, clase, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, grosor_texto)
 
         if i == 0:
             estado = clase
