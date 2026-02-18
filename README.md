@@ -52,9 +52,9 @@ The dataset and trained models are hosted in the **Releases** section of this re
   - 2hojas_QCNN.pth
   - best.pt
   - hojas2clases/
-    - Data1/ (Unzip images here)
+    - Data1/ (Unzip images here: Extract to "Data1\")
   - HojasSimulador/
-    - Data2/ (Unzip images here)
+    - Data2/ (Unzip images here: Extract to "Data2\")
 
 ## Usage Workflow
 The correct workflow for using this project is as follows:
