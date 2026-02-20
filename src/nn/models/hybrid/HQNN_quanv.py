@@ -33,7 +33,7 @@ class FlexHybridCNN(nn.Module):
         n_filters_1: int = 32,
         fc_hidden_dim: int = 128,
         epochs: int = 10,
-        dataset: str = 'EuroSAT',
+        dataset: str = '2hojas',
         image_size: int = 32,
     ):
         super().__init__()
@@ -54,7 +54,7 @@ class FlexHybridCNN(nn.Module):
         if self.dataset == "2hojas":
             self.in_channels_1, self.in_channels_2 = 3, 3 * self.qkernel_shape**2
         else:
-            raise ValueError("Dataset not supported. Try with 'Colors' or 'Señales'")
+            raise ValueError("Dataset not supported. Try with '2hojas'")
 
         self.kernel_size = 3
 
