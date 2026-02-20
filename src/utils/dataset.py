@@ -172,4 +172,4 @@ def load_dataset(dataset, output, limit, allowed_classes, image_size, test_size)
 
             return DataLoader(train_dataset, batch_size=32, shuffle=True), DataLoader(val_dataset, batch_size=32, shuffle=False)
     else:
-        raise ValueError("Invalid dataset. Accepted values are '2hojas', 'Mariposas', 'Agricultura', 'Arroz' or 'Satelite'")
+        raise ValueError("Invalid dataset. Accepted value is '2hojas'")
