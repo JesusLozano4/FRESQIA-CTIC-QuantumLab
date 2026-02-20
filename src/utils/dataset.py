@@ -10,7 +10,7 @@ import random
 class Two_Dataset:
     def __init__(self, root="../dataset/hojas2clases/Data1", image_size=64, batch_size=256,
                  test_size=0.2, random_state=42, examples_per_class=10000,
-                 allowed_classes=None, output='np', dset="Colors"):
+                 allowed_classes=None, output='np', dset="2hojas"):
         self.root = root
         self.image_size = image_size
         self.batch_size = batch_size
