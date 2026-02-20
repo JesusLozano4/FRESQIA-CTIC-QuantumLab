@@ -118,10 +118,6 @@ class FlexHybridCNN(nn.Module):
         # Flatten
         x = x.view(x.size(0), -1)
 
-        # Lazy initialization for fc1
-        if self.fc1 is None:
-            self.fc1 = nn.Linear(x.size(1), self.fc_hidden_dim).to(self.device)
-
         x = self.fc1(x)
         x = torch.relu(x)
         #x = self.dropout(x)
