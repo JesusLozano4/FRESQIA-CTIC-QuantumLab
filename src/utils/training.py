@@ -4,7 +4,6 @@ import torch
 import schedulefree as sf
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score
 from torch.utils.data import DataLoader
-from torch.utils.data import DataLoader
 from src.utils.plotting import confusion_matrix_plot, accuracies, losses, other_metrics
 from loguru import logger
 
